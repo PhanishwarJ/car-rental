@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ridex - Rent your favourite car</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.svg" alt="Ridex logo">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+          </li>
+
+          <li>
+            <a href="#featured-car" class="navbar-link" data-nav-link>Explore cars</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link" data-nav-link>About us</a>
+          </li>
+
+          <li>
+            <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <div class="header-contact">
+          <a href="tel:+917842805486" class="contact-link">+917842805486</a>
+
+          <span class="contact-time">Mon - Sat: 9:00 am - 6:00 pm</span>
+        </div>
+
+        <a href="#featured-car" class="btn" aria-labelledby="aria-label-txt">
+          <ion-icon name="car-outline"></ion-icon>
+
+          <span id="aria-label-txt">Explore cars</span>
+        </a>
+
+        <a href="#" class="btn user-btn" aria-label="Profile">
+          <ion-icon name="person-outline"></ion-icon>
+        </a>
+
+        <button class="nav-toggle-btn" data-nav-toggle-btn aria-label="Toggle Menu">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section>
+   
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURED CAR
+      -->
+
+      <section class="section featured-car" id="featured-car">
+        <div class="container">
+            <div class="title-wrapper">
+                <h2 class="h2 section-title" style="padding-top:20px">Place Order</h2>
+    
+                <a href="#" class="featured-car-link">
+                    <span>View more</span>
+                    <ion-icon name="arrow-forward-outline"></ion-icon>
+                </a>
+            </div>
+    
+            <form id="userForm">
+                <ul class="featured-car-list">
+                    <li>
+                        <div class="featured-car-card">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div class="featured-car-card">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div class="featured-car-card">
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div class="featured-car-card">
+                            <label for="dob">Date of Birth:</label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div class="featured-car-card">
+                            <label>Time Format Preference:</label>
+                            <div class="radio-group" style="display: flex; gap: 100px">
+                                <div>
+                                    <input type="radio" id="12hrs" name="time_format" value="12hrs" required>
+                                    <label for="12hrs">12 Hours (Rs.3500)</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="24hrs" name="time_format" value="24hrs">
+                                    <label for="24hrs">24 Hours (Rs.4500)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div class="featured-car-card">
+                            <label for="dlno">Driving Licence Number:</label>
+                            <input type="text" id="dlno" name="dlno" required>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div class="featured-car-card">
+                            <!-- Terms and Conditions -->
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I accept the <a href="#" id="termsLink">Terms and Conditions</a></label>
+                            <!-- Hidden terms text -->
+                            <p id="termsText" style="display:none; font-size: 0.9em; margin-top: 10px;">
+                                Terms and conditions: External damage won’t be covered by the company, and internal problem bills will directly be routed to the company. The company pays for those bills.
+                            </p>
+                        </div>
+                    </li>
+    
+                    <li>
+                        <div class="featured-car-card">
+                            <button class="btn" type="submit">Submit</button>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Error message display area -->
+                <p id="error-message" style="color: red;"></p>
+            </form>
+    
+        </div>
+    
+        <script>
+            document.getElementById("termsLink").addEventListener("click", function(event) {
+                event.preventDefault(); // Prevent default anchor behavior
+                const termsText = document.getElementById("termsText");
+                // Toggle visibility of terms and conditions
+                termsText.style.display = termsText.style.display === "none" ? "block" : "none";
+            });
+    
+            document.getElementById("userForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form submission
+    
+                const dob = new Date(document.getElementById("dob").value);
+                const today = new Date();
+                const age = today.getFullYear() - dob.getFullYear();
+                const dlNo = document.getElementById("dlno").value;
+                const termsChecked = document.getElementById("terms").checked;
+    
+                let errorMessage = "";
+    
+                // Check if user is over 18
+                if (age < 18 || (age === 18 && today < new Date(dob.setFullYear(dob.getFullYear() + 18)))) {
+                    errorMessage += "You must be over 18 years old.\n";
+                }
+    
+                // Check if Driving License Number is provided
+                if (dlNo.trim() === "") {
+                    errorMessage += "Driving Licence Number is required.\n";
+                }
+    
+                // Check if terms are accepted
+                if (!termsChecked) {
+                    errorMessage += "You must accept the Terms and Conditions.\n";
+                }
+    
+                if (errorMessage) {
+                    document.getElementById("error-message").textContent = errorMessage;
+                } else {
+                    document.getElementById("error-message").textContent = "";
+                    alert("Car Booked with Order No:7seater985k");
+                    // Here you can proceed with form submission, such as sending the data to a server
+                }
+            });
+        </script>
+    </section>
+    
+    
+
+
+
+
+
+      <!-- 
+        - #GET START
+      -->
+
+      
+
+
+
+
+      <!-- 
+        - #BLOG
+      -->
+
+
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" alt="Ridex logo">
+          </a>
+
+          <p class="footer-text">
+            Search for cheap rental cars in Hyderabad. With a diverse fleet of 19,000 vehicles.
+          </p>
+        </div>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Company</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Pricing plans</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Our blog</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contacts</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Support</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Help center</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Ask a question</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Privacy policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & conditions</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Neighborhoods in Hyderabad</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Ameerpet</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Somajiguda</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Jubilee Hills</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Banjara Hills</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Uppal</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Amberpet</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Vidya Nagar</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Gachibowli</a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-skype"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="mail-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+        <p class="copyright">
+          &copy; 2024 <a href="#">Bharat</a>. All Rights Reserved
+        </p>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
